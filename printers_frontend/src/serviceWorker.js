@@ -126,7 +126,7 @@ function checkValidServiceWorker(swUrl, config) {
     });
 }
 
-export function http://localhost:3000/crud://localhost:3000/crudregister() {
+export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();

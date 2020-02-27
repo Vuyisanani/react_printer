@@ -52,7 +52,7 @@ class DataTable extends Component {
             <th>ID</th>
             <th>Printer Name</th>
             <th>Printer IP Address</th>
-            <th>Printer Status</th>
+            <th>Printer</th>
             <th>Actions</th>
           </tr>
         </thead>

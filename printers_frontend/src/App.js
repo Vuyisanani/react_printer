@@ -68,7 +68,7 @@ class App extends Component {
               Download CSV
             </CSVLink>
             <ModalForm buttonLabel="Add Item" addItemToState={this.addItemToState}/>
-          </Col>Printer
+          </Col>
         </Row>
       </Container>
     )

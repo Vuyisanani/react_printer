@@ -87,7 +87,7 @@ class AddEditForm extends React.Component {
         
         <FormGroup>
           <Label for="printer_status">Printer Status</Label>
-          <Input type="text" name="printer_status" id="printer_status" onChange={this.onChange} value={this.state.printer_status}  />
+          <Input type="text" name="printer_status" id="printer_status" onChange={this.onChange} value={this.state._status}  />
         </FormGroup>
         <Button>Submit</Button>
       </Form>
