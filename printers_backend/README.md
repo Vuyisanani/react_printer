@@ -53,7 +53,7 @@ createdb crud-starter-api
 Open pSequel and run the following command. Change the table name to whatever you would like to name the table.
 
 ```
-CREATE TABLE testtable1 (
+CREATE TABLE printers_table (
  id serial PRIMARY KEY,
  printers_name VARCHAR(100),
  printers_ip VARCHAR(100),
@@ -63,9 +63,11 @@ CREATE TABLE testtable1 (
 ```
 
 ## Printers Frontend
-View the [repository for the frontend](https://github.com/Vuyisanani/printers_frontend) that goes along with this API. It uses React and Bootstrap to display a responsive data table. It serves as the perfect starter for the frontend, however, you can use any frontend to access this API.
+View the [repository for the frontend](https://github.com/Vuyisanani/react_printer/tree/master/printers_frontend) that goes along with this API. It uses React and Bootstrap to display a responsive data table. It serves as the perfect starter for the frontend, however, you can use any frontend to access this API.
 
 ## Further Information
-This is just a starter kit for getting a basic API up and running. Feel free to change any and every thing about it. A production ready app with more API requests and routes should undoubtedly have much of the code abstracted to different files and folders. This repo simply eliminates the need for a dev to do a bunch of research on how to get an API setup, secure, and running in a professional manner.
+This is just a starter kit for getting a basic API up and running. Feel free to change any and every thing about it. A production rea# Medium Article
+For full details on every piece of code in this Printers API, visit the companion [Medium article here](https://medium.com/@olinations/build-a-crud-template-using-react-bootstrap-express-postgres-9f84cc444438?source=friends_link&sk=51028bf98ff92bc659d3edbb539a82bb).
+dy app with more API requests and routes should undoubtedly have much of the code abstracted to different files and folders. This repo simply eliminates the need for a dev to do a bunch of research on how to get an API setup, secure, and running in a professional manner.
 
 An important piece that is missing from this API is an authentication API. In that case it is recommended to install bCrypt for password hashing and authentication. Then, more routes should be created for registering, logging in and logging out users. There should also be a scheme for keeping users logged in. The suggested method for persisting logins would be to use JWT for token creation, Redis to store tokens in server memory, and localStorage to save tokens on the frontend. The tokens stored in localStorage will be sent back to the API via authorization headers for protected requests and would need to be verified by the server.
