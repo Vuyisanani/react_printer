@@ -1,5 +1,5 @@
 const getTableData = (req, res, db) => {
-  db.select('*').from('testtable1')
+  db.select('*').from('printers_table')
     .then(items => {
       if(items.length){
         res.json(items)
@@ -11,9 +11,9 @@ const getTableData = (req, res, db) => {
 }
 
 const postTableData = (req, res, db) => {
-  const { first, last, email, phone, location, hobby } = req.body
+  const { printers_name, printers_ip, printers_status } = req.body
   const added = new Date()
-  db('testtable1').insert({first, last, email, phone, location, hobby, added})
+  db('printers_table').insert({ printers_name, printers_ip, printers_status, added })
     .returning('*')
     .then(item => {
       res.json(item)
@@ -22,8 +22,8 @@ const postTableData = (req, res, db) => {
 }
 
 const putTableData = (req, res, db) => {
-  const { id, first, last, email, phone, location, hobby } = req.body
-  db('testtable1').where({id}).update({first, last, email, phone, location, hobby})
+  const { id, printers_name, printers_ip, printers_status } = req.body
+  db('printers_table').where({id}).update({  printers_name, printers_ip, printers_status })
     .returning('*')
     .then(item => {
       res.json(item)
@@ -33,7 +33,7 @@ const putTableData = (req, res, db) => {
 
 const deleteTableData = (req, res, db) => {
   const { id } = req.body
-  db('testtable1').where({id}).del()
+  db('printers_table').where({id}).del()
     .then(() => {
       res.json({delete: 'true'})
     })

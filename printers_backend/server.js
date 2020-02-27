@@ -26,7 +26,7 @@ var db = require('knex')({
     host : '127.0.0.1',
     user : '',
     password : '',
-    database : 'crud-starter-api'
+    database : 'printers-api'
   }
 });
 
